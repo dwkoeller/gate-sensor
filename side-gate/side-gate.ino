@@ -114,7 +114,7 @@ void callback(char* p_topic, byte* p_payload, unsigned int p_length) {
 void checkDoorState() {
   //Checks if the door state has changed, and MQTT pub the change
  
-  state = getCurrentState(DOOR_CHEST_PIN);
+  state = getCurrentState(SIDE_GATE_PIN);
   if (state != lastState) {
     lastState = state;
     if(state == "Closed") {
