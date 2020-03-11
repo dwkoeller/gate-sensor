@@ -129,7 +129,7 @@ void createBinarySensors(String sensor, String sensor_name) {
   String topic = String(MQTT_DISCOVERY_BINARY_SENSOR_PREFIX) + sensor + "/config";
   String message = String("{\"name\": \"") + sensor_name +
                    String("\", \"state_topic\": \"") + String(MQTT_DISCOVERY_BINARY_SENSOR_PREFIX) + sensor +
-                   String("/state\", \"device_class\": \"opening\"}");
+                   String("/state\", \"device_class\": \"door\"}");
   Serial.print(F("MQTT - "));
   Serial.print(topic);
   Serial.print(F(" : "));
